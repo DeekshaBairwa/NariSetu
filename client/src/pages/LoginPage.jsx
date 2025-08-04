@@ -17,7 +17,7 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://narisetu-backend.onrender.com/api/auth/login',
         {
           email: formData.email,
           password: formData.password

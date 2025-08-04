@@ -25,7 +25,7 @@ const Helpline = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/feedback/submit', {
+      const res = await axios.post('https://narisetu-backend.onrender.com/api/feedback/submit', {
         email,
         experience,
         suggestions,
