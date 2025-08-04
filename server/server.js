@@ -15,9 +15,15 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Middleware
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://narisetu-frontend.onrender.com"
+];
+
 app.use(cors({
-    origin: "http://localhost:5173",  // frontend port
-    credentials: true
+  origin: allowedOrigins,
+  credentials: true
 }));
 app.use(express.json());
 
